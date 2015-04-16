@@ -14,7 +14,11 @@ public class HelloController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
 
-		logger.debug("This is Hello Word Logging");
+		logger.debug("This is Hello Word Logging for Debug");
+		logger.info("This is Info Log");
+		logger.error("This is Error log");
+		logger.trace("This is Trace log");
+		logger.warn("This is Warn log");
 		model.addAttribute("message", "Hello world!");
 		return "hello";
 	}
